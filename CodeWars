@@ -1,1 +1,39 @@
+// Shortest Word
+function findShort(s){
+    //   convert string to array
+      const strArr = s.split(' ');
+    //   loop through array and find length
+      const lengthOfWords = strArr.map(string => {
+        return (string.length);
+      })
+    //   output length of shortest string
+      return Math.min(...lengthOfWords);
+    
+    }
 
+//Odds or Even
+function oddOrEven(array) {
+  return array.reduce(function(sum, item) {
+    return sum + item
+  }, 0) % 2 == 0 ? 'even' : 'odd';
+}
+
+console.log(oddOrEven([1, 2]));
+console.log(oddOrEven([1, 3]));
+console.log(oddOrEven([]));
+
+//Create Phone Number
+function createPhoneNumber(numbers){
+  function createPhoneNumber(arr) {
+    return `(${arr.slice(0, 3).join('')}) ${arr.slice(3, 6).join('')}-${arr.slice(6).join('')}`;
+}
+}
+function createPhoneNumber(arr) {
+    let mask = '(xxx) xxx-xxxx';
+
+    arr.forEach(item => {
+        mask = mask.replace('x', item);
+    });
+
+    return mask;
+}
